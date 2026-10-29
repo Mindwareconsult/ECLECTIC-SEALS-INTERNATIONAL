@@ -1,0 +1,6 @@
+{
+  "name": "Eclectic Seals Int'l",
+  "description": "Abuja's premium architecture, luxury interior design, renovation, construction, and property solutions company.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

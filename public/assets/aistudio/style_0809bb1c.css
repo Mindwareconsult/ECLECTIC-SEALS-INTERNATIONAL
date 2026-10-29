@@ -1,0 +1,22 @@
+/*
+Theme Name: Eclectic Seals
+Theme URI: https://www.eclecticseals.com/
+Author: Eclectic Seals Int'l
+Author URI: https://www.eclecticseals.com/
+Description: Native WordPress theme for Eclectic Seals Int'l, a premium construction, interior design and property solutions company based in Abuja, Nigeria. Converted from a static HTML build while preserving the original design, layout, animations and responsive behaviour pixel-for-pixel. Includes custom post types for Projects and Testimonials, a multi-step quote request wizard, and full menu/widget support.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: eclectic-seals
+Tags: custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, e-commerce
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+The main stylesheet for this theme lives at assets/css/style.css and is
+enqueued via inc/enqueue.php. This file intentionally only carries the
+required theme header block read by WordPress.
+*/

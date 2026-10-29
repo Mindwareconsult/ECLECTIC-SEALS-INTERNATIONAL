@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy: #0F172A;
+    --navy-dark: #0A0F1D;
+    --navy-light: #1B2842;
+    --gold: #C8A45D;
+    --orange: #F5810D;
+    --copper: #C9670A;
+    --bg: #F8F9FA;
+    --bg-light: #F1F3F5;
+    --charcoal: #162032;
+    --text: #222222;
+    --text-muted: #5B6370;
+  }
+
+  .dark {
+    --navy: #080D1A;
+    --navy-dark: #040810;
+    --navy-light: #121C2F;
+    --bg: #0B1120;
+    --bg-light: #111827;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --charcoal: #0F172A;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Utilities matching the Eclectic Seals theme */
+.text-gold {
+  color: #C8A45D;
+}
+
+.text-orange-brand {
+  color: #F5810D;
+}
+
+.bg-orange-brand {
+  background-color: #F5810D;
+}
+
+.bg-navy {
+  background-color: #0F172A;
+}
+
+.bg-navy-light {
+  background-color: #1B2842;
+}
+
+.border-orange-brand {
+  border-color: #F5810D;
+}
+
+/* Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #F5810D;
+  border-radius: 4px;
+}

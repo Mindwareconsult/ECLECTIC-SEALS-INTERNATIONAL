@@ -1,0 +1,715 @@
+# MASTER PROMPT: RECREATE THE ECLECTIC SEALS INTERNATIONAL WEBSITE FROM THE UPLOADED THEME
+
+## 1. YOUR ROLE
+
+Act as a senior frontend engineer, UI/UX designer, website architect, and conversion-focused digital experience developer.
+
+Your task is to study the uploaded `eclectic-seals-theme-lite.zip` WordPress theme and recreate its website as a highly faithful, responsive, production-quality website in Google AI Studio.
+
+The uploaded theme is the primary source of truth for the design, layout, colour system, typography, content hierarchy, page structure, navigation, components, animations, and interactions.
+
+Do not design an unrelated website inspired by the theme. Reconstruct the website represented by the theme's actual source code as closely as the available assets and implementation environment allow.
+
+Before coding, inspect all accessible files in the archive, especially:
+
+- `front-page.php`
+- `header.php`
+- `footer.php`
+- `home.php`
+- `page-about.php`
+- `page-services.php`
+- `page-why-us.php`
+- `archive-project.php`
+- `single-project.php`
+- `page-contact.php`
+- `page-request-quote.php`
+- `page-faq.php`
+- `archive-testimonial.php`
+- `single-testimonial.php`
+- `single.php`
+- `search.php`
+- `404.php`
+- `page-privacy-policy.php`
+- `page-terms-conditions.php`
+- `assets/css/style.css`
+- `assets/js/script.js`
+- `assets/js/admin-project-gallery.js`
+- `inc/cpt.php`
+- `inc/seed-content.php`
+- `inc/customizer.php`
+- `inc/menus.php`
+- `inc/helpers.php`
+- `inc/data/projects.json`
+- `inc/data/testimonials.json`
+- `inc/data/modals.json`
+- `inc/data/blog-posts.json`
+- `template-parts/`
+
+Inspect the actual implementation before deciding how to recreate any component. Extract and reuse the original text, labels, service information, project data, testimonials, FAQs, and other content wherever available.
+
+If a file or asset cannot be accessed, do not pretend to have inspected it. Use the available source files and preserve the intended design.
+
+## 2. WEBSITE IDENTITY
+
+Website name: Eclectic Seals Int'l.
+
+Business category: Architecture, construction, luxury interior design, renovation, furnishings, landscaping, paint manufacturing, building supplies, and property management.
+
+Primary market: Abuja, Nigeria.
+
+Brand positioning: A premium, multidisciplinary design and construction company delivering refined spaces, dependable construction services, and complete property solutions.
+
+Retain the business identity and authentic content represented in the theme. Do not replace the company with a different brand or introduce an unrelated business model.
+
+## 3. EXACT VISUAL DESIGN SYSTEM
+
+Implement the following design tokens throughout the website.
+
+### Colours
+
+- Primary deep navy: #0F172A
+- Secondary navy: #1B2842
+- Signature orange: #F5810D
+- Copper accent: #C9670A
+- White: #FFFFFF
+- Main light background: #F8F9FA
+- Light grey sections: #F1F3F5
+- Body text: #222222
+- Secondary text: approximately #5B6370
+- Success state: #22C55E
+
+Navy should dominate the header, hero, dark sections, footer, and important contrast areas. Orange and copper should be used for accents, eyebrow labels, highlighted heading phrases, icons, progress indicators, interactive states, and primary call-to-action buttons.
+
+Do not substitute a generic blue-and-white corporate palette.
+
+### Typography
+
+Use Playfair Display for display headings, page titles, section headings, and elegant brand elements.
+
+Use Inter for body copy, navigation, labels, form controls, buttons, metadata, and other interface text.
+
+Use sensible fallbacks when font loading is unavailable.
+
+Headings should be expressive and confident. Body copy should remain highly legible, with comfortable line spacing and restrained line lengths.
+
+### Layout
+
+- Maximum content width: approximately 1320px.
+- Use generous vertical section spacing.
+- Use a consistent responsive container and spacing system.
+- Use large split layouts combining photography and text.
+- Use three-column project and service grids on desktop where appropriate.
+- Use four-column information-card layouts where the original template specifies them.
+- Use editorial image grids and masonry layouts for galleries.
+- Use rounded cards, approximately 12–24px corner radii depending on the component.
+- Apply subtle, sophisticated shadows rather than excessive elevation.
+- Maintain strong contrast between light and dark sections.
+
+### Buttons
+
+Create reusable button styles matching the theme:
+
+1. Primary orange button with dark text.
+2. Transparent white-outline button for dark backgrounds.
+3. Transparent navy-outline button for light backgrounds.
+4. Compact button variant for the navigation.
+
+Buttons should have appropriate hover states, smooth transitions, and visible keyboard-focus states. Include directional arrow icons where the source theme uses them.
+
+## 4. GLOBAL HEADER AND NAVIGATION
+
+Recreate the header in `header.php`.
+
+Build a responsive navigation bar with:
+
+- Company logo or original logo mark.
+- Company name styled using the display typeface.
+- Primary navigation links.
+- Theme's dark-mode toggle.
+- Prominent Request Quote button.
+- Mobile hamburger menu.
+- Full-screen or full-height navy mobile navigation treatment, consistent with the source CSS.
+
+The desktop navigation should use a translucent navy background with backdrop blur, refined spacing, white text, and orange hover indicators.
+
+Use the source theme's navigation hierarchy wherever recoverable. It should accommodate Home, About, Services, Why Us, Projects, Testimonials, Blog, FAQ, Contact, and Request Quote, including nested links when supported by the source.
+
+Implement working links, active-page indicators, keyboard navigation, and a functional mobile menu. Do not leave decorative or inert navigation controls.
+
+## 5. HOMEPAGE — REPRODUCE `front-page.php`
+
+The homepage is the most important page. Reconstruct its sections in the original order.
+
+### Section 1: Full-screen hero
+
+Create a large, cinematic, photographic hero with a deep navy background and a dark image overlay.
+
+Use an appropriate architectural or construction image for the hero, preferably an original bundled asset if one exists. Do not assume that an unavailable image filename corresponds to an accessible image.
+
+Include the original orange architectural line illustration over the hero. Recreate the SVG line path and circular nodes from the source template.
+
+Display:
+
+Eyebrow:
+"Abuja's Premium Design & Construction Studio"
+
+Main heading:
+"From Concept To Blueprint To Reality."
+
+Emphasise "Blueprint To Reality." in orange.
+
+Supporting text:
+"From luxury interior design and bespoke furnishings to large-scale construction, renovation, landscaping, paint manufacturing, and property management, Eclectic Seals Int'l delivers timeless spaces built with excellence."
+
+Primary CTA:
+"Request a Free Consultation"
+
+Secondary CTA:
+"View Our Projects"
+
+The buttons should navigate to the appropriate quote and project pages.
+
+Include the four original hero trust badges:
+
+- 10+ Years of Industry Experience
+- Quality Craftsmanship
+- Trusted Professionals
+- Premium Customer Service
+
+Use compact, translucent pill-shaped badges with check icons.
+
+Preserve the hero's spacious composition, image treatment, typography scale, and strong contrast.
+
+### Section 2: Who We Are
+
+Create the original split layout with a large architectural or interior-finishing photograph on the left and company introduction on the right.
+
+Eyebrow: "Who We Are"
+
+Heading:
+"Creating Exceptional Spaces That Inspire"
+
+Use the original theme copy describing the company's construction, luxury interiors, renovation, property solutions, building supplies, multidisciplinary expertise, and end-to-end project delivery.
+
+Include:
+
+- About Us
+- Request Quote
+
+### Section 3: Services
+
+Use a light-grey background.
+
+Eyebrow: "What We Do"
+
+Heading:
+"Comprehensive Building & Property Solutions"
+
+Supporting text:
+"Everything you need, from concept to completion, under one accountable roof."
+
+Recreate the source theme's service-card grid using the actual service data from `inc/data/modals.json`, `inc/seed-content.php`, or the appropriate template.
+
+Each card should contain:
+
+- Original service icon where available.
+- Service title.
+- Short description.
+- Relevant service bullet points.
+- Learn More action.
+
+Preserve the service categories and their original order wherever recoverable. Reproduce the service-detail modal functionality, including opening, closing, keyboard dismissal, and accessible focus behaviour.
+
+Do not invent extra service categories if the source provides the actual list.
+
+### Section 4: Why Choose Eclectic Seals?
+
+Use a deep navy background with white headings and subtle orange accents.
+
+Eyebrow: "Why Eclectic Seals"
+
+Heading:
+"Why Clients Choose Eclectic Seals Int'l"
+
+Reproduce the six feature cards:
+
+1. Experienced Professionals
+2. Superior Craftsmanship
+3. Quality Materials
+4. On-Time Delivery
+5. Transparent Pricing
+6. Customer Satisfaction
+
+Use the original descriptions from the theme, including the stated client satisfaction statistic where it appears in the source.
+
+Each card should have a line icon, heading, concise description, and restrained hover animation.
+
+### Section 5: Featured Projects
+
+Use a clean light background.
+
+Eyebrow: "Portfolio"
+
+Heading: "Featured Projects"
+
+Supporting text:
+"A selection of recent work across interiors, renovation, construction and landscaping."
+
+Display three featured project cards, using the actual project records from `inc/data/projects.json` or the corresponding source data.
+
+Each card should support:
+
+- Project image.
+- Project title.
+- Project category.
+- Short description where available.
+- Link to the individual project page.
+
+Include a "View All Projects" button linking to the full portfolio.
+
+Use authentic project images where supplied. Never fabricate completed projects or imply that stock photography depicts a real company project.
+
+### Section 6: Our Process
+
+Use the original dark navy section and horizontal numbered process layout.
+
+Eyebrow: "How We Work"
+
+Heading: "Our Process"
+
+Reproduce the seven original steps:
+
+01. Initial Consultation
+02. Site Inspection
+03. Design & Planning
+04. Quotation
+05. Project Execution
+06. Quality Inspection
+07. Project Delivery
+
+Use the original descriptions, numbered circular seals, connecting visual treatment where appropriate, and responsive wrapping on smaller screens.
+
+### Section 7: Client Testimonials
+
+Use the original light-grey section.
+
+Eyebrow: "Client Voices"
+
+Heading: "What Our Clients Say"
+
+Recreate the horizontally moving testimonial-card presentation.
+
+Each card should include:
+
+- Five-star visual treatment if present in the original.
+- Testimonial text.
+- Client name.
+- Client role or designation where available.
+- Circular initials avatar or original portrait if provided.
+
+Use the actual testimonial data from the theme. If the source contains sample testimonials, preserve their sample status rather than presenting them as independently verified reviews.
+
+Implement smooth, continuous movement, pause on hover where appropriate, reduced-motion support, and responsive behaviour.
+
+### Section 8: Final CTA
+
+Reproduce the original call-to-action section.
+
+Heading:
+"Let's Build Something Extraordinary Together"
+
+Supporting text:
+"Tell us about your project and we'll respond within one business day with next steps."
+
+Buttons:
+
+- Request Consultation
+- Call Now
+
+Use the original CTA styling and available contact information. Keep telephone links functional.
+
+### Section 9: Remaining homepage content
+
+Inspect the remainder of `front-page.php` and recreate any additional sections appearing after the main CTA, preserving their order and design. Do not stop at the sections listed above if more homepage content exists in the source.
+
+## 6. ABOUT PAGE
+
+Recreate `page-about.php`.
+
+Include the original page hero, breadcrumb, eyebrow, title, introductory text, image layouts, company story, company mission and values where present, supporting content, and CTA sections.
+
+Preserve the original typography, alternating backgrounds, split-media sections, and card layouts.
+
+Link naturally to the Services, Projects, Why Us, and Request Quote pages.
+
+Use the actual source content rather than replacing the About page with generic marketing copy.
+
+## 7. SERVICES PAGE
+
+Recreate `page-services.php`.
+
+Include:
+
+- Page hero and breadcrumb.
+- Introduction to the company's integrated delivery model.
+- Complete service catalogue.
+- Original service descriptions and feature lists.
+- Service cards or sections in the original order.
+- Relevant project and quote CTAs.
+- Process and reliability sections.
+- Original gallery or masonry layout.
+- FAQ section if included in the source template.
+- Final CTA and footer.
+
+Service links should lead to relevant service details, sections, or modals as intended by the original theme.
+
+Do not collapse the full Services page into a single homepage-style card grid.
+
+## 8. WHY US PAGE
+
+Recreate `page-why-us.php`.
+
+Preserve the original hero, company differentiators, reliability messaging, workflow, feature cards, gallery, FAQs, and CTAs.
+
+Use the source content and actual component structures. Match the original navy, orange, white, and light-grey visual system.
+
+## 9. PROJECT PORTFOLIO
+
+Recreate `archive-project.php`.
+
+The portfolio must function as a complete project archive, not just a decorative gallery.
+
+Include:
+
+- Portfolio page hero or introduction.
+- Project category filters based on the original taxonomy.
+- Responsive project grid.
+- Project thumbnail and title.
+- Project category and available summary.
+- Links to individual project detail pages.
+- Empty-state messaging if no project matches the chosen filter.
+- Pagination or a working Load More interaction if appropriate.
+
+Use actual project records from the supplied JSON data and theme logic.
+
+If the original theme defines a particular taxonomy, reproduce it rather than inventing a different filtering system.
+
+### Individual project pages
+
+Recreate `single-project.php`.
+
+Each project detail page should include the available project title, featured image, category, description, gallery, and other project metadata present in the source.
+
+Include a clear return-to-portfolio link and a relevant consultation CTA.
+
+Preserve the theme's gallery behaviour and ensure images are responsive.
+
+## 10. TESTIMONIAL PAGES
+
+Recreate `archive-testimonial.php` and `single-testimonial.php`.
+
+The archive should display the available testimonial records in a well-spaced responsive grid or the layout specified in the source.
+
+Each card should include the available client name, role, testimonial text, and avatar treatment.
+
+The individual testimonial page should use the corresponding record and provide sensible navigation back to the archive.
+
+Do not create fictional client identities or invent verified testimonials.
+
+## 11. BLOG AND ARTICLE PAGES
+
+Recreate `home.php`, `single.php`, `search.php`, and the related blog template parts.
+
+The blog listing should support:
+
+- Blog page heading and introduction where available.
+- Article cards.
+- Featured images.
+- Article title and excerpt.
+- Publication date and category where available.
+- Read More links.
+- Pagination where appropriate.
+
+Individual article pages should display the article title, metadata, featured image, body content, and related navigation.
+
+Search should provide a working search input, display matching content, and include a useful empty state.
+
+Use the original blog data in `inc/data/blog-posts.json` if available.
+
+## 12. FAQ PAGE
+
+Recreate `page-faq.php`.
+
+Use the source FAQ content and category groupings, where present.
+
+Implement accessible accordion items with clear open and closed states. Support keyboard interaction and appropriate ARIA attributes.
+
+Include a relevant contact or Request Quote CTA below the FAQs.
+
+## 13. CONTACT PAGE
+
+Recreate `page-contact.php`.
+
+Include the page hero, breadcrumb, and four contact-information cards:
+
+- Office Address
+- Phone
+- WhatsApp
+- Working Hours
+
+Use the actual contact details configured in the source theme. If any details cannot be verified, preserve editable placeholders rather than inventing replacements.
+
+Recreate the contact form with the fields defined in the source:
+
+- Full Name
+- Email
+- Phone Number
+- Service Required
+- Subject
+- Message
+- Preferred Contact Method: Call, WhatsApp, Email
+
+Implement validation, clear inline error messages, loading and success states, and spam protection appropriate to the chosen framework.
+
+WhatsApp links should open the correct WhatsApp conversation when a valid business number is available. Phone and email links must use the appropriate protocols.
+
+If no backend email service is configured, explain this and prepare a clean integration point. Do not falsely claim that a message has been delivered when it has not.
+
+## 14. REQUEST QUOTE PAGE
+
+Recreate `page-request-quote.php`.
+
+Study the actual form template and reproduce its full structure, steps, and fields.
+
+Include all source-defined project and contact information fields, budget or service selections, preferred communication details, validation, submission feedback, and CTA styling.
+
+Where the source uses a multi-step or structured form, preserve that interaction.
+
+Design the form to feel premium, uncluttered, trustworthy, and easy to complete on mobile.
+
+Implement actual submission handling if the environment supports it. Otherwise, provide a documented backend integration point and honest success/error feedback.
+
+## 15. LEGAL PAGES AND ERROR STATES
+
+Recreate:
+
+- `page-privacy-policy.php`
+- `page-terms-conditions.php`
+- `404.php`
+
+Legal pages should use readable content widths, suitable headings, breadcrumbs where applicable, and the shared footer.
+
+The 404 page should use the brand styling, explain that the requested page was not found, and provide working links to Home, Projects, Services, and Contact.
+
+Do not fill legal pages with invented legal claims. Preserve existing source content where available and mark incomplete content for review.
+
+## 16. FOOTER
+
+Recreate `footer.php` closely.
+
+Inspect the source for the complete footer layout, including any company introduction, logo, navigation groups, service links, contact information, social media links, business hours, copyright text, and legal links.
+
+Preserve the original layout and ordering.
+
+Use a deep navy background, restrained orange highlights, high-contrast text, and appropriate spacing.
+
+Make all available links functional. Do not invent social media accounts or unsupported company details.
+
+## 17. ANIMATIONS AND INTERACTIONS
+
+Study `assets/js/script.js` and recreate its relevant visual behaviours.
+
+Implement, where supported by the source:
+
+- Initial page loader.
+- Scroll-progress indicator.
+- Sticky or translucent navigation.
+- Mobile navigation open/close transitions.
+- Dark-mode toggle.
+- Scroll-triggered reveal animations.
+- Staggered card entrances.
+- Hover lift and button transitions.
+- Service-detail modals.
+- Testimonial marquee.
+- FAQ accordions.
+- Project gallery interactions.
+- Form validation and submission states.
+- Back-to-top control if present in the original.
+
+Use smooth, restrained motion. Respect `prefers-reduced-motion`, avoid blocking page content behind a loader, and ensure animations never make navigation or content inaccessible.
+
+If a particular effect depends on unavailable WordPress behaviour, reproduce the same user-facing outcome with an appropriate modern implementation.
+
+## 18. TECHNICAL IMPLEMENTATION
+
+Translate the WordPress theme into a maintainable modern web application supported by Google AI Studio.
+
+Use React with TypeScript and a suitable styling system, unless the project environment requires a different supported stack.
+
+Recommended architecture:
+
+- Shared site header.
+- Shared footer.
+- Reusable page hero.
+- Reusable service cards.
+- Reusable project cards.
+- Reusable testimonial cards.
+- Reusable CTA sections.
+- Reusable form controls.
+- Reusable modal and accordion components.
+- Centralised project, service, testimonial, and navigation data.
+- Clearly defined routes for every page.
+- A consistent global design-token file.
+
+Separate content from presentation wherever possible.
+
+Do not simply create one large React component containing the entire website.
+
+Preserve all available original content and the page hierarchy while adapting WordPress functionality to the selected application architecture.
+
+Ensure that direct navigation to nested routes works, that links resolve correctly, and that refreshing a nested route does not cause a blank page or routing error.
+
+## 19. IMAGES AND ASSETS
+
+Inspect the entire ZIP for actual image assets and their references.
+
+Use original supplied assets whenever they are available and identifiable.
+
+Do not confuse an asset filename mentioned in PHP with an asset that actually exists in the ZIP.
+
+For any missing image, use a visually appropriate architectural photograph only as a temporary replacement. Keep these substitutions clearly identifiable in the data or code so they can be replaced with authentic company imagery.
+
+Use the correct image for each context:
+
+- Hero: strong architectural or construction scene.
+- About: team, office, interior, or construction imagery.
+- Services: relevant service-specific photography.
+- Portfolio: the actual image associated with each project.
+- Gallery: relevant project details.
+- Blog: the article's appropriate featured image.
+
+Use `object-fit: cover` where appropriate, preserve image aspect ratios, prevent layout shifts, and implement lazy loading for below-the-fold images.
+
+Do not stretch images, repeat the same image across every project without justification, or use unrelated luxury-house photography to represent specific completed projects.
+
+## 20. RESPONSIVE DESIGN
+
+The website must work correctly on desktop, laptop, tablet, and mobile.
+
+Desktop:
+- Full horizontal navigation.
+- Spacious hero and split layouts.
+- Multi-column grids.
+- Full-width photographic sections.
+
+Tablet:
+- Adjusted heading sizes and section spacing.
+- Flexible grids and split layouts.
+- No horizontal overflow.
+
+Mobile:
+- Functional mobile menu.
+- Single-column content where necessary.
+- Responsive typography.
+- Full-width or appropriately stacked buttons.
+- Readable cards and forms.
+- Properly cropped images.
+- Touch-friendly interactive controls.
+- No clipped headings, overflowing tables, or inaccessible navigation.
+
+Test at widths of approximately 375px, 768px, 1024px, and 1440px.
+
+## 21. SEO, ACCESSIBILITY, AND PERFORMANCE
+
+Implement:
+
+- Semantic HTML.
+- Logical heading hierarchy.
+- Unique page titles and meta descriptions.
+- Descriptive image alt text.
+- Open Graph metadata.
+- Canonical URLs where appropriate.
+- Accessible form labels and validation messages.
+- Visible keyboard-focus states.
+- Proper contrast.
+- Descriptive internal links.
+- Responsive images and lazy loading.
+- Sensible code splitting where supported.
+- Efficient animation and image loading.
+
+Use meaningful, page-specific metadata rather than copying the same title and description across the entire website.
+
+## 22. CONTENT FIDELITY RULES
+
+The uploaded theme takes precedence over generic design assumptions.
+
+Preserve the original:
+
+- Brand identity.
+- Colour values.
+- Fonts.
+- Navigation hierarchy.
+- Section order.
+- Page-specific content.
+- Service titles and descriptions.
+- Project records.
+- Testimonials.
+- CTA wording.
+- Form fields.
+- Footer structure.
+- Component behaviour.
+
+Where the original source contains contradictory or duplicated content, prefer the most consistent implementation supported by the templates and data.
+
+Do not invent company statistics, project records, client names, awards, addresses, certifications, or contact information.
+
+If original content is unavailable, use a clearly marked editable placeholder instead of representing invented information as fact.
+
+## 23. IMPLEMENTATION WORKFLOW
+
+Work in the following order.
+
+Phase 1 — Source audit:
+Inspect the uploaded theme, identify available assets, map all pages and routes, and document the design system.
+
+Phase 2 — Design foundation:
+Build the typography, colour tokens, containers, buttons, shared navigation, responsive menu, footer, and reusable page hero.
+
+Phase 3 — Homepage:
+Reconstruct the complete homepage in the source order before proceeding to secondary pages.
+
+Phase 4 — Remaining pages:
+Implement About, Services, Why Us, Projects, individual Project, Testimonials, individual Testimonial, Blog, Article, FAQ, Contact, Request Quote, Privacy Policy, Terms and Conditions, Search, and 404.
+
+Phase 5 — Interactions:
+Implement the original theme's interactions, animation, filtering, modals, accordions, navigation, and form states.
+
+Phase 6 — Quality assurance:
+Run the application, inspect every route, resolve compilation and runtime errors, check responsive layouts, and test every interactive element.
+
+Do not stop after generating a homepage mockup. Complete the full website.
+
+## 24. ACCEPTANCE CRITERIA
+
+The implementation is complete only when:
+
+1. The website visually matches the source theme's design system.
+2. The homepage contains all sections present in the source.
+3. Every relevant source page has been recreated.
+4. The navigation, footer, buttons, and internal links work.
+5. The project archive and project detail pages are functional.
+6. The service modals, accordions, and other interactions work.
+7. Forms validate correctly and have honest submission states.
+8. Mobile and desktop layouts are usable.
+9. The project builds and runs without unresolved errors.
+10. No major sections have been omitted merely to simplify development.
+11. Unavailable assets and content are handled transparently.
+12. The implementation does not claim that an external service or backend works unless it has actually been configured and tested.
+
+## FINAL INSTRUCTION
+
+Begin by auditing the uploaded theme files and extracting the design system and full page structure. Then implement the complete website in the active Google AI Studio project.
+
+Prioritise fidelity to the original theme over creative reinterpretation. Reuse original content, assets, and behaviours whenever possible.
+
+Do not respond with only a plan, a list of recommendations, or a static mockup. Build the working website, test it, and report any remaining limitations or missing assets clearly.
